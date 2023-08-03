@@ -7,13 +7,13 @@ router.get("/",(req,res)=>{
       if(e){
          console.error();
       }else{
-         res.render("C:/Users/Santiago/OneDrive/Escritorio/TCC-BD/view/index.ejs",{results:results})
+         res.render("../view/index.ejs",{results:results})
       }
    })
 })
 
 router.get("/create",(req,res)=>{
-   res.render("C:/Users/Santiago/OneDrive/Escritorio/TCC-BD/view/create.ejs");
+   res.render("../view/create.ejs");
    
 })
 
@@ -23,7 +23,7 @@ router.get("/edit/:id",(req,res)=>{
       if(error){
         throw error;
       }else{
-         res.render("C:/Users/Santiago/OneDrive/Escritorio/TCC-BD/view/edit.ejs",{user:results[0]})
+         res.render("../view/edit.ejs",{user:results[0]})
       }
    })
 })
